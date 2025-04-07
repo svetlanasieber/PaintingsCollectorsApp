@@ -1,5 +1,6 @@
 package com.paintingscollectors.user.model;
 
+import com.paintingscollectors.painting.model.FavouritePainting;
 import com.paintingscollectors.painting.model.Painting;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -33,7 +34,8 @@ public class User {
     @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
     private List<Painting> paintings;
 
-
+    @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
+    private List<FavouritePainting> favouritePaintings;
 
 
 }
