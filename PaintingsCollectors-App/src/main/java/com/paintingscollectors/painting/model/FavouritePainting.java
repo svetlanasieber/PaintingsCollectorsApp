@@ -22,7 +22,10 @@ public class FavouritePainting {
 
     @Column(nullable = false)
     private String name;
-
+    
+    @Column(nullable = false)
+    private String author;
+    
     @ManyToOne
     private User owner;
 
